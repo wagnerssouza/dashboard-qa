@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Call Performance Analysis Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="images/logo.svg" alt="Lightfire Partners" />
+    </div>
+
+    <div class="section-title filters-icon">Filters</div>
+    <div class="accordion-item">
+      <button class="accordion-header sales-person-icon">Salesperson</button>
+      <div class="accordion-content">
+        <input type="text" placeholder="Enter salesperson..." />
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header start-date-icon">Start Date</button>
+      <div class="accordion-content">
+        <input type="date" lang="en-US" />
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header end-date-icon">End Date</button>
+      <div class="accordion-content">
+        <input type="date" lang="en-US" />
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header phone-number-icon">Phone Number</button>
+      <div class="accordion-content">
+        <input type="text" placeholder="Enter number..." />
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header campaign-icon">Campaign</button>
+      <div class="accordion-content">
+        <input type="text" placeholder="Enter campaign..." />
+      </div>
+    </div>
+
+    <div class="filter-actions">
+      <button class="search">SEARCH</button>
+      <button>CLEAR</button>
+    </div>
+
+    <div class="section-title agents-icon">Agents</div>
+
+    <ul class="agents-list">
+
+      <li class="accordion-item">
+        <button class="agent-item sales-person-icon">
+          <span>Zaujka Hunter</span>
+          <img src="images/add-icon.png" class="add" />
+        </button>
+      </li>
+
+      <li class="accordion-item">
+        <button class="agent-item sales-person-icon">
+          <span>Yorkhiko Nelson</span>
+          <img src="images/remove-icon.png" class="remove" />
+        </button>
+      </li>
+
+      <li class="accordion-item">
+        <button class="agent-item sales-person-icon">
+          <span>Yorkhiko Nelson</span>
+          <img src="images/remove-icon.png" class="remove" />
+        </button>
+      </li>
+
+      <li class="accordion-item">
+        <button class="agent-item sales-person-icon">
+          <span>Yorkhiko Nelson</span>
+          <img src="images/remove-icon.png" class="remove" />
+        </button>
+      </li>
+    </ul>
+
+
+
+  </aside>
+
+  <main class="main">
+    <div class="header">
+      <div>
+        <div class="sub-title">Call Performance Analysis</div>
+        <h1>DASHBOARD</h1>
+      </div>
+    </div>
+
+
+    <div class="header-table">
+
+      <h3 class="all-calls">All Calls</h3>
+      <div class="header-actions">
+        <button class="night-mode-btn night-mode-icon">
+          <img src="images/night-mode-icon.svg" class="icon" />
+          <span>NIGHT MODE</span>
+        </button>
+        <button class="csv-btn csv-icon">
+          <img src="images/arrow-down-white-icon.svg" class="icon" />
+          <span>CSV FILE</span>
+        </button>
+        <button class="fullscreen-btn fullscreen-icon">
+          <img src="images/fullscreen-icon.svg" class="icon" />
+          <span>FULLSCREEN</span>
+        </button>
+      </div>
+    </div>
+    <div class="table-wrap">
+
+      <table id="callsTable">
+        <thead>
+          <tr>
+            <th>
+              <div class="th-content">
+                <img src="images/arrow-down-icon.svg" class="icon" />
+                <span>Call ID</span>
+              </div>
+            </th>
+
+            <th>
+              <div class="th-content">
+                <img src="images/arrow-down-icon.svg" class="icon" />
+                <span>Transcripts</span>
+              </div>
+            </th>
+
+            <th>
+              <div class="th-content">
+                <img src="images/arrow-down-icon.svg" class="icon" />
+                <span>Number 1</span>
+              </div>
+            </th>
+
+            <th>
+              <div class="th-content">
+                <img src="images/arrow-down-icon.svg" class="icon" />
+                <span>Number 2</span>
+              </div>
+            </th>
+
+            <th>
+              <div class="th-content">
+                <img src="images/arrow-down-icon.svg" class="icon" />
+                <span>Number 3</span>
+              </div>
+            </th>
+
+            <th>
+              <div class="th-content">
+                <img src="images/arrow-down-icon.svg" class="icon" />
+                <span>Number 4</span>
+              </div>
+            </th>
+
+            <th>
+              <div class="th-content">
+                <img src="images/arrow-down-icon.svg" class="icon" />
+                <span>Number 5</span>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="clickable-row" onclick="showRowDetails('9234997213001')">
+            <td>9234997213001</td>
+            <td>
+              <div class="full-transcript-wrapper">
+                <img src="images/full-transcript-icon.svg" class="icon">
+              <span>Full Transcript</span>
+              </div>
+              
+            </td>
+            <td class="number"><img src="images/add-icon.png" class="add" /></td>
+            <td class="number"><img src="images/remove-icon.png" class="remove" /></td>
+            <td class="number"><img src="images/add-icon.png" class="add" /></td>
+            <td class="number"><img src="images/remove-icon.png" class="remove" /></td>
+            <td class="number"><img src="images/add-icon.png" class="add" /></td>
+          </tr>
+          <tr class="clickable-row" onclick="showRowDetails('9234997213002')">
+            <td>9234997213002</td>
+            <td>📄 Full Transcript</td>
+            <td class="number"><img src="images/add-icon.png" class="add" /></td>
+            <td class="number"><img src="images/remove-icon.png" class="remove" /></td>
+            <td class="number"><img src="images/add-icon.png" class="add" /></td>
+            <td class="number"><img src="images/remove-icon.png" class="remove" /></td>
+            <td class="number"><img src="images/add-icon.png" class="add" /></td>
+          </tr>
+          <tr class="clickable-row" onclick="showRowDetails('9234997213003')">
+            <td>9234997213003</td>
+            <td>📄 Full Transcript</td>
+            <td class="number"><img src="images/add-icon.png" class="add" /></td>
+            <td class="number"><img src="images/remove-icon.png" class="remove" /></td>
+            <td class="number"><img src="images/add-icon.png" class="add" /></td>
+            <td class="number"><img src="images/remove-icon.png" class="remove" /></td>
+            <td class="number"><img src="images/add-icon.png" class="add" /></td>
+          </tr>
+          <tr class="clickable-row" onclick="showRowDetails('9234997213004')">
+            <td>9234997213004</td>
+            <td>📄 Full Transcript</td>
+            <td class="number"><img src="images/add-icon.png" class="add" /></td>
+            <td class="number"><img src="images/remove-icon.png" class="remove" /></td>
+            <td class="number"><img src="images/add-icon.png" class="add" /></td>
+            <td class="number"><img src="images/remove-icon.png" class="remove" /></td>
+            <td class="number"><img src="images/add-icon.png" class="add" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <!-- Overlay para escurecer o fundo -->
+  <div id="detail-overlay"></div>
+
+  <div id="table-item-detail">
+    <header>
+      <button id="back-button">
+        <img src="images/arrow-left-icon.svg" alt="Back" />
+      </button>
+      <h2>Call ID</h2>
+      <span id="call-id"></span>
+    </header>
+    <section class="detail-content">
+      <div class="detail-header">
+        <div class="detail-info-grid">
+          <div class="info-item">
+            <img src="images/start-date-icon.svg" class="info-icon" alt="Date" />
+            <span class="info-value" id="call-date">06/05/2025</span>
+          </div>
+          <div class="info-item">
+            <img src="images/calls-icon.svg" class="info-icon" alt="Time" />
+            <span class="info-value" id="call-time">01:45 EST</span>
+          </div>
+          <div class="info-item">
+            <img src="images/sales-person-icon.svg" class="info-icon" alt="Customer" />
+            <span class="info-value" id="customer-name">Customer Name</span>
+          </div>
+          <div class="info-item">
+            <img src="images/agents-icon.svg" class="info-icon" alt="Agent" />
+            <span class="info-value" id="agent-name">Agent Name</span>
+          </div>
+        </div>
+      </div>
+      <div class="detail-body">
+        <h2 class="call-details">Call Details</h2>
+         <div class="accordion-item">
+      <button class="accordion-header sales-person-icon">Full Transcript</button>
+      <div class="accordion-content">
+        <p>
+1. Hi Melissa, this is Abt here working with SHAA, and our credit line, I'm calling back because you've previously scheduled an interview regarding the windows and doors upgrade. Yes, we'll be doing some work in your area, and would like to schedule a time we can come by to give you the free normal measuring for the estimate, and we have some excellent promotion and discounts available. Will you be available tomorrow? No we're not, I'll be over for that, I said maybe next week some time, so hold on one second, I'll schedule. Alright we can do next Wednesday, I just need to get my scheduling department online with you, and then confirm the schedule and time, I'll be here to introduce you as soon as we can though, and just to let you know, these calls are recorded for quality and interning purposes, just a moment. So next Wednesday, what time works best for you next Wednesday? Thank you for calling FHI remodeling, this is Diego speaking, how can I help you? Hi Diego, this is Affi, I have Melisa Torres on the line with us, they want to reschedule their free estimate for the next available time we have in their neighborhood, she also stated that she'll be available next Wednesday, that's the only time she has available, anytime around after one o'clock, can you assist? Yeah I got it, you can put her on, please. Hi Melissa the agent's on the line, we'll take great care of you, alright? Hi Diego. Alright bye! Hi Ms Torres, how are you? Good! That's good to hear, it's gonna be relatively straightforward, I mean as far as the following Wednesday, just so I don't take up too much of your time, I can definitely do anytime after one o'clock, would be like two o'clock, the earliest == the latest I can do is six for you, either or would be okay? I was thinking actually between 12 and 1, so do you have anything for that? I can do, yeah, I can put in there for you for 12, let me move this in here forward for you first, just to reiterate the address, and just let me know if I'm wrong. It's, wow, hold on, I'm sorry, 2875 South Oasis Drive, Boynton, 33426? Yep! All right, so I'll move it in there for the following Wednesday for you, and you said 12 o'clock was okay, right? Yep! All right, so they're gonna call you the day prior, so just be on the lookout for the phone call, that...
+2. Hi Melissa, this is Abt here working with SHAA, and our credit line, I'm calling back because you've previously scheduled an interview regarding the windows and doors upgrade. Yes, we'll be doing some work in your area, and would like to schedule a time we can come by to give you the free normal measuring for the estimate, and we have some excellent promotion and discounts available. Will you be available tomorrow? No we're not, I'll be over for that, I said maybe next week some time, so hold on one second, I'll schedule. Alright we can do next Wednesday, I just need to get my scheduling department online with you, and then confirm the schedule and time, I'll be here to introduce you as soon as we can though, and just to let you know, these calls are recorded for quality and interning purposes, just a moment. So next Wednesday, what time works best for you next Wednesday? Thank you for calling FHI remodeling, this is Diego speaking, how can I help you? Hi Diego, this is Affi, I have Melisa Torres on the line with us, they want to reschedule their free estimate for the next available time we have in their neighborhood, she also stated that she'll be available next Wednesday, that's the only time she has available, anytime around after one o'clock, can you assist? Yeah I got it, you can put her on, please. Hi Melissa the agent's on the line, we'll take great care of you, alright? Hi Diego. Alright bye! Hi Ms Torres, how are you? Good! That's good to hear, it's gonna be relatively straightforward, I mean as far as the following Wednesday, just so I don't take up too much of your time, I can definitely do anytime after one o'clock, would be like two o'clock, the earliest == the latest I can do is six for you, either or would be okay? I was thinking actually between 12 and 1, so do you have anything for that? I can do, yeah, I can put in there for you for 12, let me move this in here forward for you first, just to reiterate the address, and just let me know if I'm wrong. It's, wow, hold on, I'm sorry, 2875 South Oasis Drive, Boynton, 33426? Yep! All right, so I'll move it in there for the following Wednesday for you, and you said 12 o'clock was okay, right? Yep! All right, so they're gonna call you the day prior, so just be on the lookout for the phone call, that...
+3. Hi Melissa, this is Abt here working with SHAA, and our credit line, I'm calling back because you've previously scheduled an interview regarding the windows and doors upgrade. Yes, we'll be doing some work in your area, and would like to schedule a time we can come by to give you the free normal measuring for the estimate, and we have some excellent promotion and discounts available. Will you be available tomorrow? No we're not, I'll be over for that, I said maybe next week some time, so hold on one second, I'll schedule. Alright we can do next Wednesday, I just need to get my scheduling department online with you, and then confirm the schedule and time, I'll be here to introduce you as soon as we can though, and just to let you know, these calls are recorded for quality and interning purposes, just a moment. So next Wednesday, what time works best for you next Wednesday? Thank you for calling FHI remodeling, this is Diego speaking, how can I help you? Hi Diego, this is Affi, I have Melisa Torres on the line with us, they want to reschedule their free estimate for the next available time we have in their neighborhood, she also stated that she'll be available next Wednesday, that's the only time she has available, anytime around after one o'clock, can you assist? Yeah I got it, you can put her on, please. Hi Melissa the agent's on the line, we'll take great care of you, alright? Hi Diego. Alright bye! Hi Ms Torres, how are you? Good! That's good to hear, it's gonna be relatively straightforward, I mean as far as the following Wednesday, just so I don't take up too much of your time, I can definitely do anytime after one o'clock, would be like two o'clock, the earliest == the latest I can do is six for you, either or would be okay? I was thinking actually between 12 and 1, so do you have anything for that? I can do, yeah, I can put in there for you for 12, let me move this in here forward for you first, just to reiterate the address, and just let me know if I'm wrong. It's, wow, hold on, I'm sorry, 2875 South Oasis Drive, Boynton, 33426? Yep! All right, so I'll move it in there for the following Wednesday for you, and you said 12 o'clock was okay, right? Yep! All right, so they're gonna call you the day prior, so just be on the lookout for the phone call, that...
+
+        </p>
+      </div>
+    </div>
+        <!-- Conteúdo adicional do painel aqui -->
+      </div>
+
+    </section>
+  </div>
+
+  <script>
+    // Accordion logic
+    document.querySelectorAll(".accordion-header").forEach(header => {
+      header.addEventListener("click", () => {
+        header.classList.toggle("active");
+        const content = header.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+
+    function showRowDetails(rowId) {
+      const detailPanel = document.getElementById("table-item-detail");
+      const overlay = document.getElementById("detail-overlay");
+      
+      // Mostrar painel e overlay
+      detailPanel.classList.add("show");
+      overlay.classList.add("show");
+      
+      console.log("Mostrando detalhes para Row ID:", rowId);
+
+      // Atualizar Call ID
+      const callIdElement = detailPanel.querySelector("#call-id");
+      if (callIdElement) {
+        callIdElement.textContent = rowId;
+      }
+    }
+
+    function closeDetailPanel() {
+      const detailPanel = document.getElementById("table-item-detail");
+      const overlay = document.getElementById("detail-overlay");
+      
+      // Esconder painel e overlay
+      detailPanel.classList.remove("show");
+      overlay.classList.remove("show");
+    }
+
+    document.getElementById("back-button").addEventListener("click", closeDetailPanel);
+    
+    // Fechar ao clicar no overlay
+    document.getElementById("detail-overlay").addEventListener("click", closeDetailPanel);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+      closeDetailPanel();
+      }
+    });
+  </script>
+</body>
+
+</html>
