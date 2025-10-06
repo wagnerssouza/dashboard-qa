@@ -500,3 +500,14 @@ body {
 .full-transcript-wrapper .icon {
   width: 20px;
 }
+
+
+.add-icon,
+.remove-icon {
+  width: 18px;
+}
+
+.transcript-text {
+  padding: 0 16px 0 0;
+  text-align: justify;
+}
