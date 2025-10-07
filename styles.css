@@ -552,3 +552,40 @@ body {
 .numbers-list .status.na-status {
   color: #000000;
 }
+
+
+/* datepicker css custom */
+.datepicker {
+  font-size: 14px;
+}
+
+.datepicker-header .datepicker-controls .button {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.datepicker-dropdown {
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+input#startDate,
+input#endDate {
+  width: 90%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+input#startDate:focus,
+input#endDate:focus {
+  border-color: #666;
+  outline: none;
+}
+
+.datepicker-cell.today.focused:not(.selected),
+.datepicker-cell.today:not(.selected)  {
+    background-color: #ccc !important;
+    color: #000 !important;
+}

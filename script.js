@@ -81,3 +81,27 @@ document.querySelector(".fullscreen-btn").addEventListener("click", () => {
     document.exitFullscreen();
   }
 });
+
+// === Vanilla JS Datepicker ===
+const startInput = document.querySelector('#startDate');
+const endInput = document.querySelector('#endDate');
+
+const startPicker = new Datepicker(startInput, {
+  autohide: true,
+  format: 'mm/dd/yyyy',
+  todayHighlight: true,
+});
+
+const endPicker = new Datepicker(endInput, {
+  autohide: true,
+  format: 'mm/dd/yyyy',
+  todayHighlight: true,
+});
+
+// Sincronizar datas (end date não pode ser antes da start)
+startInput.addEventListener('changeDate', (e) => {
+  const startDate = e.detail.date;
+  endPicker.setOptions({
+    minDate: startDate,
+  });
+});
