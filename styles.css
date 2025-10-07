@@ -478,7 +478,6 @@ body {
 
 .detail-body .accordion-item {
   border-bottom: none;
-  padding: 0 16px 0 0;
 }
 .full-transcript-wrapper {
   display: flex;
@@ -505,7 +504,7 @@ body {
 }
 
 .transcript-text {
-  /* padding: 0 16px 0 0; */
+  padding: 0 16px 0 0;
   text-align: justify;
 }
 
