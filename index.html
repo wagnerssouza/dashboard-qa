@@ -6,11 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard QA | lightfirepartners.com</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- Vanilla JS Datepicker -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/css/datepicker.min.css"
-/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/css/datepicker.min.css" />
 
 
 </head>
@@ -31,23 +27,22 @@
     <div class="accordion-item">
       <button class="accordion-header start-date-icon">Start Date</button>
       <div class="accordion-content">
-        <!-- <input type="date" lang="en-US" /> -->
-             <input id="startDate" type="text" placeholder="Select start date" />
+        <input id="startDate" type="text" placeholder="Select start date" />
 
       </div>
     </div>
     <div class="accordion-item">
       <button class="accordion-header end-date-icon">End Date</button>
       <div class="accordion-content">
-        <!-- <input type="date" lang="en-US" /> -->
-             <input id="endDate" type="text" placeholder="Select end date" />
+        <input id="endDate" type="text" placeholder="Select end date" />
 
       </div>
     </div>
     <div class="accordion-item">
       <button class="accordion-header phone-number-icon">Phone Number</button>
       <div class="accordion-content">
-        <input type="text" placeholder="Enter number..." />
+        <input type="tel" id="usPhone" placeholder="+1 415 555 2671" inputmode="numeric"
+          aria-describedby="usPhoneError" />
       </div>
     </div>
     <div class="accordion-item">
@@ -278,8 +273,22 @@
           <button class="accordion-header full-transcript-icon">Full Transcript</button>
           <div class="accordion-content">
             <p class="transcript-text">
-             Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-             There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+              Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
+              Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
+              undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+              (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+              ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+              amet..", comes from a line in section 1.10.32.
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
+              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
+              the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
+              necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin
+              words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks
+              reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or
+              non-characteristic words etc.
             </p>
           </div>
         </div>
@@ -314,6 +323,10 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/datepicker-full.min.js"></script>
+  <script src="https://unpkg.com/libphonenumber-js@1.12.23/bundle/libphonenumber-min.js"></script>
+  <script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
+
+
   <script src="script.js"></script>
 </body>
 
