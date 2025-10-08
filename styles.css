@@ -35,31 +35,71 @@ body {
   height: 100vh;
 }
 
-.sidebar {
+.toggle-menu {
+  background: #000;
+  color: white;
+  width: 16px;
+  transition: all 0.2s ease;
+}
+
+.toggle-menu:hover {
   width: 260px;
+  padding: 20px 40px;
+}
+
+.toggle-menu:hover .filter-actions {
+  display: flex;
+}
+
+
+.toggle-menu .logo-collapsed {
+  margin-bottom: 26px;
+  text-align: center;
+  padding-bottom: 23px;
+  border-bottom: 1px #000 solid;
+  display: block;
+}
+
+.toggle-menu .logo-collapsed .phoenix-logo {
+  width: 40px;
+  position: relative;
+  left: -11px;
+
+}
+
+.toggle-menu:hover .logo-collapsed {
+  display: none;
+}
+
+.toggle-menu .logo {
+  margin-bottom: 26px;
+  text-align: center;
+  padding-bottom: 23px;
+  border-bottom: 1px #000 solid;
+  display: none;
+}
+
+.toggle-menu:hover .logo {
+  display: block;
+}
+
+.logo img.main-logo {
+  max-width: 146px;
+}
+
+.sidebar {
   background: #ffffff;
   border-right: 1px solid #ddd;
-  padding: 20px 40px;
+  padding: 20px 28px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
 }
 
-.logo {
-  margin-bottom: 26px;
-  text-align: center;
-  padding-bottom: 23px;
-  border-bottom: 1px #000 solid
-}
-
-.logo img {
-  max-width: 146px;
-}
-
 .section-title {
   font-size: 14px;
   font-weight: 700;
-  margin: 15px 0 5px;
+  margin: 15px 0 5px -2px;
   color: #999;
   text-transform: uppercase;
 }
@@ -70,6 +110,11 @@ body {
   background-size: 30px 25px;
   padding: 20px 0px 20px 48px;
   background-position: left center;
+  display: none;
+}
+
+.toggle-menu:hover .agents-icon {
+  display: block
 }
 
 .filters-icon {
@@ -152,16 +197,22 @@ body {
   margin: 5px 0;
   width: 100%;
   max-width: 240px;
-  ;
   padding: 6px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-family: 'Space Grotesk', Arial, sans-serif;
+  display: none;
+}
+
+.toggle-menu:hover .accordion-content input {
+  display: block;
 }
 
 .filter-actions {
   display: flex;
   gap: 8px;
+  display: none;
+  transition: visibility 0.3s ease;
   margin: 10px 0;
 }
 
@@ -187,6 +238,10 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: none;
+}
+.toggle-menu:hover .agents-list {
+  display: block;
 }
 
 .agent-item {
@@ -285,13 +340,6 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.header .export input {
-  padding: 6px 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-family: 'Space Grotesk', Arial, sans-serif;
 }
 
 .header .export .csv-btn {
