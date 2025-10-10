@@ -165,6 +165,7 @@ body {
 
 .logo img.main-logo {
   max-width: 146px;
+  height: 86px;
 }
 
 .sidebar {
@@ -205,7 +206,12 @@ body {
   border-bottom: 1px solid var(--color-border-detail);
 }
 
-.accordion-header {
+.item-wrapper {
+  border-bottom: 1px solid var(--color-border-detail);
+}
+
+.accordion-header,
+.item-content {
   background: none;
   border: none;
   color: var(--color-text-table-header);
@@ -223,29 +229,22 @@ body {
   background-position: left center;
 }
 
-.sales-person-icon {
-  background-image: url('images/sales-person-icon.svg');
-  background-size: 19px 21px;
+.accordion-details-aside {
+  padding: 16px 0;;
+}
+.title-accordion-details-aside {
+    display: flex;
+    align-items: center;
+    gap: 28px;
 }
 
-.start-date-icon {
-  background-image: url('images/start-date-icon.svg');
-  background-size: 19px 21px;
-}
-
-.end-date-icon {
-  background-image: url('images/end-date-icon.svg');
-  background-size: 19px 21px;
-}
-
-.phone-number-icon {
-  background-image: url('images/phone-number-icon.svg');
-  background-size: 19px 21px;
-}
-
-.campaign-icon {
-  background-image: url('images/campaign-icon.svg');
-  background-size: 19px 21px;
+.sales-person-icon,
+.start-date-icon,
+.end-date-icon,
+.phone-number-icon,
+.campaign-icon  {
+  width: 19px;
+  min-width: 19px;;
 }
 
 .accordion-arrow {
@@ -347,14 +346,16 @@ body {
   overflow-y: auto;
 }
 
-.main .all-calls {
-  background-image: url(images/calls-icon.svg);
-  background-repeat: no-repeat;
+.main .all-calls-title {
+  
   font-size: 24px;
-  padding: 5px 0px 5px 28px;
-  background-size: 21px 21px;
-  background-position: left center;
+  padding: 5px 0px 5px 8px;
+  
+}
 
+.main .all-calls-icon {
+  width: 21px;
+  
 }
 
 .header {
