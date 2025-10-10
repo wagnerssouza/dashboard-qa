@@ -1,4 +1,3 @@
-
 // Generic Accordion functionality
 function toggleAccordion(header) {
   header.classList.toggle("active");
@@ -34,8 +33,8 @@ document.querySelectorAll(".accordion-header").forEach(header => {
 
 // Show row details function
 function showRowDetails(rowId) {
-  const detailPanel = document.getElementById("table-item-detail");
-  const overlay = document.getElementById("detail-overlay");
+  const detailPanel = document.querySelector(".detail-panel");
+  const overlay = document.querySelector(".detail-overlay");
   
   // Se painel já está visível, esconde primeiro para resetar accordions
   if (detailPanel.classList.contains("show")) {
@@ -69,8 +68,8 @@ function processRowDetails(rowId, detailPanel, overlay) {
 
 // Close detail panel function
 function closeDetailPanel() {
-  const detailPanel = document.getElementById("table-item-detail");
-  const overlay = document.getElementById("detail-overlay");
+  const detailPanel = document.querySelector(".detail-panel");
+  const overlay = document.querySelector(".detail-overlay");
 
   detailPanel.classList.remove("show");
   overlay.classList.remove("show");
@@ -79,7 +78,7 @@ function closeDetailPanel() {
 
 // Event listeners
 document.getElementById("back-button").addEventListener("click", closeDetailPanel);
-document.getElementById("detail-overlay").addEventListener("click", closeDetailPanel);
+document.querySelector(".detail-overlay").addEventListener("click", closeDetailPanel);
 
 // Escape key handler
 document.addEventListener("keydown", (e) => {
@@ -89,7 +88,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 // Fullscreen functionality
-document.querySelector(".fullscreen-btn").addEventListener("click", () => {
+document.querySelector(".btn-fullscreen").addEventListener("click", () => {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen();
   } else {
